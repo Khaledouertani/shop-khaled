@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shope - Premium E-commerce Shopping Experience. Discover curated collections of high-quality products with free shipping on orders over $50.">
+    <title>Shope - Premium Shopping</title>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Shope - Premium E-commerce Shopping">
+    <meta property="og:description" content="Discover curated collections of high-quality products designed to elevate your lifestyle. Free shipping on orders over $50.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://shope.example.com">
+    <meta property="og:site_name" content="Shope">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@shope">
+    <meta name="twitter:title" content="Shope - Premium E-commerce Shopping">
+    <meta name="twitter:description" content="Discover curated collections of high-quality products designed to elevate your lifestyle. Free shipping on orders over $50.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1200&h=630&fit=crop">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" id="organization-schema">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Shope",
+        "url": "https://shope.example.com",
+        "description": "Premium E-commerce Shopping Experience",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Shope"
+        }
+    }
+    </script>
+
+    <!-- Dynamic Product Schema (populated by JS) -->
+    <script type="application/ld+json" id="product-schema">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "itemListElement": []
+    }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header" role="banner">
+        <div class="container header-inner">
+            <a href="#" class="logo" aria-label="Shope - Go to homepage">Sho<span>pe</span></a>
+
+            <nav class="nav" role="navigation" aria-label="Main navigation">
+                <a href="#" class="nav-link active" role="link">Home</a>
+                <a href="#categories" class="nav-link" role="link">Categories</a>
+                <a href="#products" class="nav-link" role="link">Products</a>
+                <a href="#" class="nav-link" role="link">About</a>
+                <a href="#" class="nav-link" role="link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="header-icon" title="Search" aria-label="Search products">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </button>
+                <button class="header-icon" title="Wishlist" aria-label="View wishlist">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </button>
+                <button class="header-icon" id="cart-toggle-btn" aria-label="Open shopping cart" aria-expanded="false" aria-controls="cart-drawer" onclick="toggleCart()">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                    </svg>
+                    <span class="cart-count" id="cart-count" aria-live="polite">0</span>
+                </button>
+                <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content" role="main">
+
+    <section class="hero" aria-labelledby="hero-title">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge" role="status">
+                        <span>Up to 50% OFF</span> Limited time offer
+                    </div>
+                    <h1 class="hero-title" id="hero-title">
+                        Discover <span class="highlight">Premium</span><br>Shopping Experience
+                    </h1>
+                    <p class="hero-description">
+                        Explore our curated collection of high-quality products designed to elevate your lifestyle. Free shipping on orders over $50.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#products" class="btn btn-primary" role="button">Shop Now</a>
+                        <a href="#categories" class="btn btn-secondary" role="button">Explore</a>
+                    </div>
+                    <div class="hero-stats" role="list" aria-label="Website statistics">
+                        <div class="hero-stat" role="listitem">
+                            <div class="hero-stat-number" aria-label="50 thousand or more">50K+</div>
+                            <div class="hero-stat-label">Happy Customers</div>
+                        </div>
+                        <div class="hero-stat" role="listitem">
+                            <div class="hero-stat-number" aria-label="1000 or more">1000+</div>
+                            <div class="hero-stat-label">Products</div>
+                        </div>
+                        <div class="hero-stat" role="listitem">
+                            <div class="hero-stat-number" aria-label="4.9 out of 5">4.9</div>
+                            <div class="hero-stat-label">Average Rating</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-main">
+                        <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=500&fit=crop" alt="Premium shopping products on display including electronics, fashion items, and accessories">
+                    </div>
+                    <div class="hero-floating hero-floating-1" role="article" aria-label="Free shipping information">
+                        <div class="hero-floating-icon" aria-hidden="true">🚚</div>
+                        <div class="hero-floating-text">
+                            <h4>Free Shipping</h4>
+                            <span>On orders $50+</span>
+                        </div>
+                    </div>
+                    <div class="hero-floating hero-floating-2" role="article" aria-label="Customer rating information">
+                        <div class="hero-floating-icon" aria-hidden="true">⭐</div>
+                        <div class="hero-floating-text">
+                            <h4>4.9 Rating</h4>
+                            <span>Customer Reviews</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories" id="categories" aria-labelledby="categories-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="categories-title">Shop by Category</h2>
+                <p class="section-subtitle">Explore our diverse range of premium products</p>
+            </div>
+            <div class="categories-grid" id="categories-grid" role="list" aria-label="Product categories">
+            </div>
+        </div>
+    </section>
+
+    <section class="products" id="products" aria-labelledby="products-title">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" id="products-title">Featured Products</h2>
+                <p class="section-subtitle">Handpicked selections for the discerning shopper</p>
+            </div>
+            <div class="filter-bar">
+                <div class="filter-buttons" id="filter-buttons" role="group" aria-label="Filter products by category">
+                </div>
+                <div class="sort-dropdown">
+                    <label for="sort-select" class="visually-hidden">Sort products</label>
+                    <select id="sort-select" class="sort-select" aria-describedby="sort-select">
+                        <option value="default">Sort by: Default</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Rating</option>
+                        <option value="newest">Newest</option>
+                    </select>
+                </div>
+            </div>
+            <div class="products-grid" id="products-grid" role="list" aria-label="Product listings">
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick View Modal -->
+    <div class="quick-view-modal" id="quick-view-modal" role="dialog" aria-modal="true" aria-labelledby="qv-name" aria-hidden="true">
+        <div class="quick-view-overlay" onclick="closeQuickView()" aria-hidden="true"></div>
+        <div class="quick-view-content" role="document">
+            <button class="quick-view-close" onclick="closeQuickView()" aria-label="Close quick view modal">
+                <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+            <div class="quick-view-body">
+                <div class="quick-view-image">
+                    <img id="qv-image" src="" alt="" role="img">
+                    <span class="quick-view-badge" id="qv-badge"></span>
+                </div>
+                <div class="quick-view-details">
+                    <span class="quick-view-category" id="qv-category"></span>
+                    <h2 class="quick-view-name" id="qv-name"></h2>
+                    <div class="quick-view-rating" id="qv-rating" aria-label="Product rating"></div>
+                    <div class="quick-view-price" id="qv-price" aria-label="Product price"></div>
+                    <p class="quick-view-description" id="qv-description"></p>
+                    <button class="quick-view-add-cart" role="button" onclick="addToCartFromQuickView()">
+                        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        Add to Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-title" aria-hidden="true">
+        <div class="cart-overlay" onclick="closeCart()" aria-hidden="true"></div>
+        <div class="cart-panel" role="document">
+            <div class="cart-header">
+                <h2 class="cart-title" id="cart-title">Your Cart</h2>
+                <button class="cart-close" onclick="closeCart()" aria-label="Close cart">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items" role="region" aria-label="Cart items">
+                <!-- Cart items will be rendered here -->
+            </div>
+            <div class="cart-footer" id="cart-footer" role="region" aria-label="Cart summary">
+                <!-- Cart footer with total and checkout button -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="Shope - Go to homepage">Sho<span>pe</span></a>
+                    <p>Your destination for premium products and exceptional shopping experience.</p>
+                    <div class="footer-social" aria-label="Social media links">
+                        <a href="#" aria-label="Follow us on Facebook">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Twitter">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram">
+                            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Shop</h4>
+                    <ul class="footer-links" role="list">
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Support</h4>
+                    <ul class="footer-links" role="list">
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping</a></li>
+                        <li><a href="#">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links" role="list">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Shope. All rights reserved.</p>
+                <div class="footer-payments" aria-label="Accepted payment methods">
+                    <span>Visa</span>
+                    <span>Mastercard</span>
+                    <span>PayPal</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
