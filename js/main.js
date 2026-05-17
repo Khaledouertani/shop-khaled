@@ -714,6 +714,10 @@ function addToCartFromQuickView() {
     if (currentQuickViewProduct) {
         addToCart(currentQuickViewProduct.id);
         closeQuickView();
+        // Open checkout after adding to cart
+        setTimeout(() => {
+            openCheckout();
+        }, 300);
     }
 }
 

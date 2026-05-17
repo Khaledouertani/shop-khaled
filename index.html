@@ -310,7 +310,7 @@
                 <div class="checkout-footer">
                     <button type="button" class="checkout-cancel-btn" onclick="closeCheckout()">Cancel</button>
                     <button type="submit" class="checkout-submit-btn" id="checkout-submit-btn">
-                        <span class="checkout-btn-text">Place Order</span>
+                        <span class="checkout-btn-text">Commander</span>
                         <span class="checkout-btn-loading">
                             <svg class="checkout-spinner" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10" stroke-opacity="0.25"></circle>
@@ -497,7 +497,7 @@
             <span class="sticky-cart-summary-count" id="sticky-cart-summary-count">0 items in cart</span>
             <span class="sticky-cart-summary-total" id="sticky-cart-summary-total">$0.00</span>
         </div>
-        <button class="sticky-cart-summary-btn">
+        <button class="sticky-cart-summary-btn" onclick="event.stopPropagation(); openCheckout()">
             Checkout
             <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
